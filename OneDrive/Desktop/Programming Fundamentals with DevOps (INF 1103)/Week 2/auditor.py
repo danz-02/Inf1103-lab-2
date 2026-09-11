@@ -16,7 +16,7 @@ while True:
     elif user_input.isdigit():
     
         stock_input = int(user_input)
-        
+
     ##Trigger Overstock Alert
         if (inventory+stock_input) > max_inventory:
                 print("Warning! Inventory exceed 500.")
@@ -28,3 +28,6 @@ while True:
         failed_entries = failed_entries + 1
 
         
+print("\n Final Inventory Report")
+print(f"Total Units Processed (Final Stock): {inventory}")
+print(f"Number of Failed/Rejected Entries: {failed_entries}")
